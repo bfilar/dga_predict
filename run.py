@@ -35,9 +35,9 @@ def create_figs(isbigram=True, islstm=True, nfolds=10, force=False):
 
         results = {'bigram': bigram_results, 'lstm': lstm_results}
 
-        pickle.dump(results, open(RESULT_FILE, 'w'))
+        pickle.dump(results, open(RESULT_FILE, 'wb'))
     else:
-        results = pickle.load(open(RESULT_FILE))
+        results = pickle.load(open(RESULT_FILE, 'rb'))
 
     # Extract and calculate bigram ROC
     if results['bigram']:

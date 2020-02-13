@@ -6,7 +6,7 @@ class RandInt:
 
     def rand_int_modulus(self, modulus):
         ix = self.seed                
-        ix = 16807*(ix % 127773) - 2836*(ix / 127773) & 0xFFFFFFFF        
+        ix = 16807*(ix % 127773) - int(2836*(ix / 127773)) & 0xFFFFFFFF
         self.seed = ix 
         return ix % modulus 
 
