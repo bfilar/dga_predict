@@ -1,4 +1,6 @@
 # Predicting Domain Generation Algorithms using LSTMs
+* This repo is Python 3 compatible and uses Tensorflow 2.0 *
+
 This repo contains very simple code for classifying domains as DGA or benign.  This
 code demonstrates our results in our arxiv paper here: https://arxiv.org/abs/1611.00791.
 One difference is the datasets.  Both the paper and this repo use 
