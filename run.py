@@ -9,7 +9,6 @@ import numpy as np
 import dga_classifier.bigram as bigram
 import dga_classifier.lstm as lstm
 
-from scipy import interp
 from sklearn.metrics import roc_curve, auc
 
 RESULT_FILE = 'results.pkl'
@@ -87,7 +86,7 @@ def calc_macro_roc(fpr, tpr):
     # Then interpolate all ROC curves at this points
     mean_tpr = np.zeros_like(all_fpr)
     for i in range(len(tpr)):
-        mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+        mean_tpr += np.interp(all_fpr, fpr[i], tpr[i])
 
     return all_fpr, mean_tpr / len(tpr), auc(all_fpr, mean_tpr) / len(tpr)
 

@@ -109,6 +109,7 @@ def gen_malicious(num_per_dga=10000):
     labels += ['ramnit']*num_per_dga
 
     # simda
+    """
     simda_lengths = range(8, 32)
     segs_size = int(max(1, num_per_dga/len(simda_lengths)))
     for simda_length in range(len(simda_lengths)):
@@ -117,7 +118,7 @@ def gen_malicious(num_per_dga=10000):
                                           tld=None,
                                           base=random.randint(2, 2**32))
         labels += ['simda']*segs_size
-
+    """
 
     return domains, labels
 
